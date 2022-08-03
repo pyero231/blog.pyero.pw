@@ -1,4 +1,4 @@
-baseurl = "https://zhaohuabing.com"
+baseurl = "https://blog-pyero-pw.vercel.app/"
 title = "Pyero Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
