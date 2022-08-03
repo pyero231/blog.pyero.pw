@@ -1,0 +1,160 @@
+baseurl = "https://zhaohuabing.com"
+title = "Pyero Blog"
+theme = "hugo-theme-cleanwhite"
+languageCode = "en-us"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+googleAnalytics = ""
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+hasCJKLanguage = true
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[params]
+  header_image = "img/bg.jpg"
+  SEOTitle = "Pyero Blog"
+  description = "My personal site"
+  keyword = "Pyero, Pyero Kerry, Pyero Zarate Arias"
+  slogan = "Welcome to my Blog!"
+
+  image_404 = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/George_H._W._Bush_presidential_portrait_%28cropped%29.jpg/330px-George_H._W._Bush_presidential_portrait_%28cropped%29.jpg"
+  title_404 = "Something wrong :("
+  omit_categories = false
+
+  # leancloud storage for page view counter
+  page_view_conter = true
+  leancloud_app_id = ""
+  leancloud_app_key = ""
+
+  # algolia site search
+  algolia_search = true
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
+
+  # Sidebar settings
+  sidebar_about_description = "I am interested in Philosophy, mathematics and computer Science. I enjoy play the piano and play chess"
+  #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = false # use absolute URL, seeing it's used in both `/` and `/about/`
+
+  featured_tags = true 
+  featured_condition_size = 1 
+
+  # Baidu Analytics
+  ba_track_id = ""
+  
+  # We need a proxy to access Disqus api in China
+  # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
+  disqus_proxy = ""
+  disqus_site = ""
+
+  # Twikoo comments
+  # Follow https://twikoo.js.org/ to set up your own env_id
+  twikoo_env_id = ""
+
+  #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
+  reward = false
+  # reward_guide = "如果这篇文章对你有用,请随意打赏" 
+
+  people = true
+  bookmarks = true
+  about_me = true
+
+  # Include any custom CSS and/or JS files, url or relative to /static folder
+  #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
+  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
+
+  [params.social]
+  rss            = true 
+  email          = "pyero@tutanota.com"
+  #facebook      = "full profile url in facebook"
+  #googleplus    = "full profile url in googleplus"
+  youtube        = "https://www.youtube.com/channel/UCBYRPWZI0iBva-b8MPemZxg"
+  #twitter       = "full profile url in twitter"
+  #linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
+  #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+  #instagram     = "full profile url in instagram"
+  github         = "https://github.com/yourgithub"
+  #medium        = "full profile url in medium"
+  #slack         = "full workspace url in slack"
+  #pinterest     = "full profile url in pinterest"
+  #reddit        = "full profile url in reddit"
+  #gitlab        = "full profile url in gitlab"
+  #mastodon      = "full profile url in mastodon"
+  #keybase       = "full profile url in keybase"
+  #xing          = "https://www.xing.com/profile/yourxingid"
+  #git           = "full profile url for git user"
+  
+  [[params.people_link]]
+  title = "Donald Knuth"
+  href =  "https://cs.stanford.edu/~knuth/"
+  [[params.people_link]]
+  title = "Scott Aaronson"
+  href =  "https://scottaaronson.blog/"
+  [[params.people_link]]
+  title = "Terence Tao"
+  href =  "https://terrytao.wordpress.com/"
+  [[params.people_link]]
+  title = "Robert Koons"
+  href =  "https://robkoons.net/"
+  [[params.people_link]]
+  title = "Alexander Pruss"
+  href =  "http://alexanderpruss.blogspot.com/"
+  [[params.people_link]]
+  title = "Edward Feser	"
+  href =  "http://edwardfeser.blogspot.com/"
+
+  [[params.bookmark_link]]
+  title =  "Stanford Encyclopedia of Philosophy"
+  href =  "https://plato.stanford.edu/"
+  [[params.bookmark_link]]
+  title = "MathWorld"
+  href =  "https://mathworld.wolfram.com/"
+  [[params.bookmark_link]]
+  title =  "arxiv"
+  href = "https://arxiv.org/"
+  [[params.bookmark_link]]
+  title = "sci-hub"
+  href = "https://sci-hub.se/"
+  [[params.bookmark_link]]
+  title = "Libgen"
+  href = "https://libgen.is/"
+  [[params.bookmark_link]]
+  title = "IMSLP"
+  href = "https://imslp.org/wiki/Main_Page"
+  [[params.bookmark_link]]
+  title = "Philpapers"
+  href = "https://philpapers.org/"
+  
+  [[params.addtional_menus]]
+  title =  "ARCHIVE"
+  href =  "/archive/"
+  [[params.addtional_menus]]
+  title =  "CV"
+  href =  "/cv/"
+  [[params.addtional_menus]]
+  title =  "PROJECTS"
+  href =  "/projects/"
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href =  "/about/"
+
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"] 
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
